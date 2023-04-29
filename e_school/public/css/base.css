@@ -1,0 +1,58 @@
+/*全局去除默认样式*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*去除列表默认样式*/
+ul,
+ol,
+textarea {
+    list-style: none;
+}
+
+/*去除默认的倾斜效果*/
+em,
+i {
+    font-style: normal;
+}
+
+/*去除a标签默认下划线，并设置文字颜色*/
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/*设置img的垂直对齐方式为居中对齐，去除img默认下间隙*/
+img {
+    vertical-align: middle;
+}
+
+/*去除input默认样式*/
+input,
+textarea {
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+/*设置浮动(先左后右)*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/*双伪元素清除法*/
+.clearFix::after,
+.clearFix::before {
+    content: "";
+    display: table;
+}
+
+.clearFix::after {
+    clear: both;
+}
