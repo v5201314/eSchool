@@ -7,3 +7,9 @@ html,body{
     height: 100%;
     position: relative;
 }
+
+/* 版心样式 */
+.wrapper{
+    width: 345px;
+    margin: 0 auto;
+}

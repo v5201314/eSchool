@@ -1,0 +1,71 @@
+#userInfo {
+  height: 74px;
+  padding-top: 10px;
+  position: relative;
+}
+#userInfo div {
+  display: inline-block;
+}
+#userInfo .showUserInfo {
+  width: 190px;
+  height: 64px;
+  font-size: 13px;
+}
+#userInfo .showUserInfo .headPortrait {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 14px ;
+  overflow: hidden;
+}
+#userInfo .showUserInfo .headPortrait img {
+  width: 64px;
+  height: 64px;
+}
+#userInfo .showUserInfo .userDetail {
+  width: 112px;
+  height: 64px;
+}
+#userInfo .showUserInfo .userDetail > div {
+  width: 100%;
+}
+#userInfo .showUserInfo .userDetail .userName {
+  height: 25px;
+  margin-bottom: 5px;
+  position: relative;
+}
+#userInfo .showUserInfo .userDetail .userName p {
+  float: left;
+  font-size: 18px;
+}
+#userInfo .showUserInfo .userDetail .userName span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: linear-gradient(-55deg, #fc7f51 0%, #fb5e55 100%), linear-gradient(#891f7c, #891f7c);
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+#userInfo .showUserInfo .userDetail .referrer span {
+  display: inline-block;
+}
+#userInfo .showUserInfo .userDetail .referrer p {
+  display: inline-block;
+}
+#userInfo .showUserInfo .userDetail .inviteCode span {
+  display: inline-block;
+}
+#userInfo .showUserInfo .userDetail .inviteCode p {
+  display: inline-block;
+}
+#userInfo .softwareSet {
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
