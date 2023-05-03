@@ -1,6 +1,5 @@
 #userInfo {
   height: 74px;
-  padding-top: 10px;
   position: relative;
 }
 #userInfo div {
@@ -9,6 +8,7 @@
 #userInfo .showUserInfo {
   width: 190px;
   height: 64px;
+  margin-top: 10px;
   font-size: 13px;
 }
 #userInfo .showUserInfo .headPortrait {
@@ -52,11 +52,15 @@
   text-align: center;
   color: #ffffff;
 }
+#userInfo .showUserInfo .userDetail .referrer {
+  position: relative;
+}
 #userInfo .showUserInfo .userDetail .referrer span {
   display: inline-block;
 }
 #userInfo .showUserInfo .userDetail .referrer p {
   display: inline-block;
+  position: absolute;
 }
 #userInfo .showUserInfo .userDetail .inviteCode span {
   display: inline-block;
@@ -67,5 +71,9 @@
 #userInfo .softwareSet {
   position: absolute;
   right: 0;
-  top: -5px;
+  top: 0;
+}
+#userInfo .softwareSet img {
+  width: 24px;
+  height: 24px;
 }

@@ -1,7 +1,7 @@
 #userInfo {
     height: 74px;
     
-    padding-top: 10px;
+   
     position: relative;
     div {
         display: inline-block;
@@ -10,6 +10,7 @@
     .showUserInfo {
         width: 190px;
         height: 64px;
+        margin-top: 10px;
         font-size: 13px;
         .headPortrait {
             width: 64px;
@@ -65,11 +66,13 @@
             }
 
             .referrer{
+                position: relative;
                 span{
                     display: inline-block;
                 }
               p{
                 display: inline-block;
+                position: absolute;
               }
             }
 
@@ -92,7 +95,13 @@
     .softwareSet{
         position: absolute;
         right: 0;
-        top: -5px;
+        top: 0;
+
+        img{
+            width: 24px;
+            height: 24px;
+        }
+
     }
 
 

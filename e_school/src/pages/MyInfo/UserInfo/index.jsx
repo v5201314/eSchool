@@ -29,8 +29,7 @@ export default class UserInfo
            
           </div>
           <div className='softwareSet'>
-              设置
-              <img src="" alt="" />
+              <img src="/icons/设置.png" alt="设置" />
             </div>
         </div>
       </Fragment>
