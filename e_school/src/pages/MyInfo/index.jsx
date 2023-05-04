@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import UserInfo from './UserInfo'
 import TimeInfo from './TimeInfo/'
 import OrdersInfo from './OrdersInfo'
+import Notify from '../../components/Notify'
 import './index.css'
 export default class MyInfo extends Component {
   render() {
@@ -12,7 +13,7 @@ export default class MyInfo extends Component {
         <UserInfo/>
         <TimeInfo/>
         <OrdersInfo/>
-        <div className='notify'></div>
+        <Notify/>
         <div className='otherFeatures'></div>
       </div>
     )

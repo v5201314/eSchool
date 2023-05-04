@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 
 import './index.css'
-export default class OrdersInfo
-    extends Component {
+export default class OrdersInfo extends Component {
     render() {
         return (
             <div id='ordersInfo'>
