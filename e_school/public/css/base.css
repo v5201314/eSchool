@@ -56,3 +56,9 @@ textarea {
 .clearFix::after {
     clear: both;
 }
+
+.shoppingCart-icon{
+    width: 25px;
+	height: 24px;
+	
+}
