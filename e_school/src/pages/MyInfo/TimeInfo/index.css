@@ -91,6 +91,8 @@
 #timeInfo .time-bottom .content > p:nth-child(n+2) {
   display: inline-block;
 }
-#timeInfo .time-bottom .content .Withdrawable {
+#timeInfo .time-bottom .content .Withdrawable,
+#timeInfo .time-bottom .content .todayTime,
+#timeInfo .time-bottom .content .yesterdayTime {
   margin-right: 5px;
 }

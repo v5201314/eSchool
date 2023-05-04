@@ -10,6 +10,7 @@ import './index.css'
 export default class MyInfo extends Component {
   state = {
     notify:'',
+    //其他功能需要的icon与介绍
     otherFeatures:[
       {
         introduce:'任务发布',
@@ -47,15 +48,41 @@ export default class MyInfo extends Component {
         introduce:'学习报名',
         src:'/icons/myInfo/形状 47.png'
       },
+    ],
+    //用户的信息
+    user:[
+      //第一个对象，用户的基本信息
+      {
+        id:'0',
+        nicName:'你的小可爱',
+        vip:'4',
+        avatar:'/images/图层 14.jpg',
+        Referrer:'张三',
+        invitationCode:'FEOOXY',
+      },
+      //第二个对象，用户的光阴值信息
+      {
+        timeValue:888,
+        WithdrawableTime:9,
+        todayTime:0,
+        yesterdayTime:0,
+      },
+      //第三个对象，用户的订单信息
+      {
+        
+        shoppingCart:0,
+        ordersFalse:0,
+        ordersTrue:0,
+      }
     ]
   }
   render() {
-    const {otherFeatures} = this.state
+    const {otherFeatures,user} = this.state
     return (
       <div id='MyInfo' className='wrapper'>
-        <UserInfo/>
-        <TimeInfo/>
-        <OrdersInfo/>
+        <UserInfo userInfo={user[0]} />
+        <TimeInfo timeInfo={user[1]} />
+        <OrdersInfo ordersInfo={user[2]} />
         <Notify/>
         <OtherFeatures otherFeatures={otherFeatures}/>
       </div>

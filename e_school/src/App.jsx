@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react'
-import { Route, Routes,Navigate } from 'react-router-dom'
+import { Route, Routes,Navigate} from 'react-router-dom'
 
 import Tabs from './components/Tabs'
 import Home from './pages/Home'
@@ -7,8 +7,15 @@ import Learn from './pages/Learn'
 import Exchange from './pages/Exchange'
 import Task from './pages/Task'
 import MyInfo from './pages/MyInfo'
-export default class App extends Component {
+
+
+//引入 connect用于连接UI组件与redux
+import {connect} from 'react-redux'
+
+class App extends Component {
+   
     render() {
+        console.log(this.props.userId);
         return (
             <Fragment>
                 <Tabs />
@@ -27,3 +34,10 @@ export default class App extends Component {
         )
     }
 }
+
+//简写方法
+export default  connect(
+    state => ({
+      userId:state.userId,
+    }),
+    )(App)

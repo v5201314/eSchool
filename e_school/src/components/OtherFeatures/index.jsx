@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import './index.css'
 export default class OtherFeatures extends Component {
 
+    //初始化key
+    i=0;
 
     render() {
         const { otherFeatures } = this.props;
@@ -11,7 +13,7 @@ export default class OtherFeatures extends Component {
                 {
                     otherFeatures.map((otherObj) => {
                         return (
-                            <div>
+                            <div key={this.i++}>
                                 <img src={otherObj.src} alt="" />
                                 <p>{otherObj.introduce}</p>
                             </div>
