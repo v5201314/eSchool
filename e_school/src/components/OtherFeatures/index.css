@@ -1,0 +1,28 @@
+#otherFeatures {
+  height: 245px;
+  background-color: #ffffff;
+  padding: 14px;
+  box-shadow: 0px 0px 4px 0px rgba(186, 186, 186, 0.18);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4px;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#otherFeatures > div {
+  padding: 8px 0;
+  text-align: center;
+}
+#otherFeatures > div img {
+  width: 29px;
+  height: 29px;
+  margin-bottom: 10px;
+}
+#otherFeatures > div p {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 19px;
+  letter-spacing: 0px;
+  color: #666666;
+}
