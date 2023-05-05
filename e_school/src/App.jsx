@@ -8,17 +8,23 @@ import Exchange from './pages/Exchange'
 import Task from './pages/Task'
 import MyInfo from './pages/MyInfo'
 
+import LoginAndEnroll from './components/LoginAndEnroll'
 
 //引入 connect用于连接UI组件与redux
 import {connect} from 'react-redux'
 
 class App extends Component {
-   
+ 
+
     render() {
-        console.log(this.props.userId);
+       const {userId} = this.props
         return (
             <Fragment>
-                <Tabs />
+                {
+                    userId === 0?
+                    <LoginAndEnroll/>:
+                    <Fragment>
+                    <Tabs />
                 <Routes>
                     <Route path='/home' Component={Home} />
                     <Route path='/learn' Component={Learn} />
@@ -28,7 +34,9 @@ class App extends Component {
 
                     <Route path="*" element={<Navigate to="/home" />} />
                 </Routes>
-
+                </Fragment>
+                }
+                
                
             </Fragment>
         )

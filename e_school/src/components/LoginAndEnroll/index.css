@@ -1,0 +1,28 @@
+#loginAndEnroll {
+  height: 44px;
+  line-height: 23px;
+  padding-top: 10px ;
+  background-image: linear-gradient(0deg, #fc7652 0%, #fb6454 100%), linear-gradient(#ffffff, #ffffff);
+  background-blend-mode: normal, 
+		normal;
+  box-shadow: 0px 0px 4px 0px rgba(24, 69, 172, 0.14);
+}
+#loginAndEnroll .head {
+  text-align: center;
+}
+#loginAndEnroll .show {
+  height: 26px;
+  background-color: #3d7eff;
+  color: #ffffff;
+  display: inline-block;
+  border-radius: 10%;
+}
+#loginAndEnroll .img-box {
+  margin-top: 8px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#loginAndEnroll .img-box img {
+  width: 345px;
+  height: 130px;
+}

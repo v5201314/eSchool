@@ -1,0 +1,46 @@
+#enroll {
+  height: 344px;
+}
+#enroll > div:nth-child(-n+6) {
+  height: 29px;
+  padding-top: 5px;
+  margin-bottom: 20px;
+}
+#enroll > div:nth-child(-n+6) div {
+  float: left;
+  width: 86px;
+  margin-right: 11px;
+}
+#enroll > div:nth-child(-n+6) div p {
+  height: 25px;
+  float: right;
+  font-size: 15px;
+  line-height: 25px;
+  color: #333333;
+}
+#enroll > div:nth-child(-n+6) div p span {
+  color: #ec0606;
+}
+#enroll > div:nth-child(-n+6) input {
+  float: left;
+  width: 170px;
+  height: 28px;
+  padding-left: 9px;
+  margin-right: 5px;
+  border-radius: 3px;
+  border: solid 1px #e0e0e0;
+}
+#enroll > div:nth-child(-n+6) button {
+  height: 29px;
+  background-color: #3d7eff;
+  border-radius: 4px;
+}
+#enroll #enrollButton {
+  height: 49px;
+  background-color: #3d7eff;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 49px;
+  font-size: 18px;
+  color: #ffffff;
+}

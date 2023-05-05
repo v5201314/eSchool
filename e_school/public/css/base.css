@@ -31,7 +31,8 @@ img {
 
 /*去除input默认样式*/
 input,
-textarea {
+textarea,
+button {
     border: none;
     outline: none;
     color: #333;
@@ -61,4 +62,10 @@ textarea {
     width: 25px;
 	height: 24px;
 	
+}
+
+.prompt{
+    height: 32px;
+    font-size: 14px;
+    color: red;
 }
