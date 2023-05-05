@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
 
-export default class Login extends Component {
+import {connect} from 'react-redux'
+import { changeUserIDAction } from '../../../redux/actions/userId'
+import './index.css'
+class Login extends Component {
+    submitFrom = ()=>{
+        this.props.changeUserIDAction(111)
+    }
   render() {
     return (
-      <div>Login</div>
+      <div id='login'>
+        <input type="text" placeholder='用户名'/>
+        <input type="text" placeholder='密码'/>
+        <div id='loginButton' onClick={this.submitFrom}>立即登录</div>
+      </div>
     )
   }
 }
+export default connect(
+    ()=>{
+
+    },
+   {
+    changeUserIDAction
+
+    })(Login)
