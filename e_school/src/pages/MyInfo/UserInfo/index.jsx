@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 
 import './index.css'
 export default class UserInfo extends Component {
@@ -8,6 +9,7 @@ export default class UserInfo extends Component {
     return (
       <Fragment>
         <div id='userInfo'>
+          <Link to='/changeInfo'>
           <div className='showUserInfo'>
             <div className='headPortrait'>
               <img src={userInfo.avatar} alt="头像" />
@@ -29,8 +31,13 @@ export default class UserInfo extends Component {
             </div>
            
           </div>
+          </Link>
+          
           <div className='softwareSet'>
-              <img src="/icons/设置.png" alt="设置" />
+            <Link to='/appSet'>
+            <img src="/icons/设置.png" alt="设置" />
+            </Link>
+             
             </div>
         </div>
       </Fragment>

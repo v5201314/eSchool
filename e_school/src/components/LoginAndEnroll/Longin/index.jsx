@@ -66,25 +66,26 @@ class Login extends Component {
 
   //提交表单 登录
   submitFrom = () => {
-    const {userNameVerify,passwordVerify} = this.state
-    if(userNameVerify&&passwordVerify){
-      console.log(this.userObj);
-      axios.post(`http://192.168.1.103:10010/user/login`,{
-        "username": this.userObj.username,
-        "password": this.userObj.password,
-      }).then(
-        res=>{
-          if(res.data.code===0){
-            this.setState({
-              userNameVerify:res.data.msg,
-              isLoginInfo:1
-            })
-          }else{
-            this.props.changeUserIDAction(res.data.data.id)
-          }
-        }
-      )
-    }
+    this.props.changeUserIDAction(111)
+    // const {userNameVerify,passwordVerify} = this.state
+    // if(userNameVerify&&passwordVerify){
+    //   console.log(this.userObj);
+    //   axios.post(`http://192.168.1.103:10010/user/login`,{
+    //     "username": this.userObj.username,
+    //     "password": this.userObj.password,
+    //   }).then(
+    //     res=>{
+    //       if(res.data.code===0){
+    //         this.setState({
+    //           userNameVerify:res.data.msg,
+    //           isLoginInfo:1
+    //         })
+    //       }else{
+    //         this.props.changeUserIDAction(res.data.data.id)
+    //       }
+    //     }
+    //   )
+    // }
     
   }
   render() {

@@ -3,19 +3,19 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import './index.css'
-class UserSet extends Component {
+class AppSet extends Component {
     render() {
         return (
-            <div id='userSet' className='warpeer'>UserSet</div>
+            <div id='userSet' className='warpeer'>AppSet</div>
         )
     }
 }
 
-connect(
+export default connect(
     (state) => {
         return{
             userId:state.userId
         }
     }, {
 
-})(UserSet)
+})(AppSet)

@@ -6,7 +6,10 @@ import Home from './pages/Home'
 import Learn from './pages/Learn'
 import Exchange from './pages/Exchange'
 import Task from './pages/Task'
+//我的页面
 import MyInfo from './pages/MyInfo'
+import AppSet from './components/AppSet'
+import ChangeInfo from './pages/MyInfo/ChangeInfo'
 
 import LoginAndEnroll from './components/LoginAndEnroll'
 
@@ -34,6 +37,8 @@ class App extends Component {
                     <Route path='/exchange' Component={Exchange} />
                     <Route path='/task' Component={Task} />
                     <Route path='/myInfo' Component={MyInfo} />
+                    <Route path='/appSet' Component={AppSet} />
+                    <Route path='/changeInfo' Component={ChangeInfo} />
 
                     <Route path="*" element={<Navigate to="/home" />} />
                 </Routes>
