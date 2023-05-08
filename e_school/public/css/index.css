@@ -12,6 +12,6 @@ html,body{
 /* 版心样式 */
 .wrapper{
     width: 100%;
-   padding:0 15px;
+   padding:15px 15px 0;
    
 }
