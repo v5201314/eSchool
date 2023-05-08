@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
+import { createBrowserHistory } from 'history';
 
 import './index.css'
+
+
+const history = createBrowserHistory()
+
 export default class ReturnArea extends Component {
 
   back = ()=>{
-    
+    history.back()
   }
 
   render() {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
+import { SERVERURL } from '../../../constantValue'
+
 import { connect } from 'react-redux'
 import { changeUserIDAction } from '../../../redux/actions/userId'
 
@@ -70,7 +72,7 @@ class Login extends Component {
     // const {userNameVerify,passwordVerify} = this.state
     // if(userNameVerify&&passwordVerify){
     //   console.log(this.userObj);
-    //   axios.post(`http://192.168.1.103:10010/user/login`,{
+    //   axios.post(SERVERURL+`/user/login`,{
     //     "username": this.userObj.username,
     //     "password": this.userObj.password,
     //   }).then(

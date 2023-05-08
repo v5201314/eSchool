@@ -1,15 +1,12 @@
 import React, { Component,Fragment } from 'react'
 import { Route, Routes,Navigate} from 'react-router-dom'
 
-import Tabs from './components/Tabs'
-import Home from './pages/Home'
-import Learn from './pages/Learn'
-import Exchange from './pages/Exchange'
-import Task from './pages/Task'
+import MainPages from './pages/MainPages'
+
 //我的页面
-import MyInfo from './pages/MyInfo'
 import AppSet from './components/AppSet'
 import ChangeInfo from './pages/MyInfo/ChangeInfo'
+
 
 import LoginAndEnroll from './components/LoginAndEnroll'
 
@@ -30,18 +27,14 @@ class App extends Component {
                     userId === 0?
                     <LoginAndEnroll/>:
                     <Fragment>
-                    <Tabs />
-                <Routes>
-                    <Route path='/home' Component={Home} />
-                    <Route path='/learn' Component={Learn} />
-                    <Route path='/exchange' Component={Exchange} />
-                    <Route path='/task' Component={Task} />
-                    <Route path='/myInfo' Component={MyInfo} />
+                    <Routes>
+                    <Route path='/mainPages/*' Component={MainPages} />
                     <Route path='/appSet' Component={AppSet} />
-                    <Route path='/changeInfo' Component={ChangeInfo} />
+                    <Route path='/changeInfo/*' Component={ChangeInfo} />
 
-                    <Route path="*" element={<Navigate to="/home" />} />
+                    <Route path="*" element={<Navigate to="/mainPages" />} />
                 </Routes>
+                
                 </Fragment>
                 }
                 

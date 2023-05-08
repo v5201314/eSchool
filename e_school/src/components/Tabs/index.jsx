@@ -38,19 +38,19 @@ export default class Tabs extends Component {
     const { tabsImgTrue, tabsImgFalse } = this
     return (
       <div id='tabs' ref={c => this.TabsRef = c}>
-        <Link to='/home'>
+        <Link replace to='/mainPages/home'>
           <div className={['label', selectedIndex === 0 ? 'selected' : 'unchecked'].join(' ')} data-index='0' onClick={this.selected}><img src={selectedIndex === 0 ? tabsImgTrue[0] : tabsImgFalse[0]} alt="首页" /><span>首页</span></div>
         </Link>
-        <Link to='/learn'>
+        <Link replace to='/mainPages/learn'>
           <div className={['label', selectedIndex === 1 ? 'selected' : 'unchecked'].join(' ')} data-index='1' onClick={this.selected}><img src={selectedIndex === 1 ? tabsImgTrue[1] : tabsImgFalse[1]} alt="学习" /><span>学习</span></div>
         </Link>
-        <Link to='/exchange'>
+        <Link replace to='/mainPages/exchange'>
           <div className={['label', selectedIndex === 2 ? 'selected' : 'unchecked'].join(' ')} data-index='2' onClick={this.selected}><img src={selectedIndex === 2 ? tabsImgTrue[2] : tabsImgFalse[2]} alt="兑换" /><span>兑换</span></div>
         </Link >
-        <Link to='/task'>
+        <Link replace to='/mainPages/task'>
           <div className={['label', selectedIndex === 3 ? 'selected' : 'unchecked'].join(' ')} data-index='3' onClick={this.selected}><img src={selectedIndex === 3 ? tabsImgTrue[3] : tabsImgFalse[3]} alt="任务" /><span>任务</span></div>
         </Link>
-        <Link to='/myInfo'>
+        <Link replace to='/mainPages/myInfo'>
           <div className={['label', selectedIndex === 4 ? 'selected' : 'unchecked'].join(' ')} data-index='4' onClick={this.selected}><img src={selectedIndex === 4 ? tabsImgTrue[4] : tabsImgFalse[4]} alt="我的" /><span>我的</span></div>
 
         </Link>

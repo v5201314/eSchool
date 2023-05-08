@@ -1,11 +1,13 @@
 #returnArea {
   height: 42px;
-  background-color: pink;
+  background-color: #ededed;
   line-height: 42px;
   text-align: center;
 }
 #returnArea span {
   float: left;
+  width: 30px;
+  height: 100%;
 }
 #returnArea p {
   display: inline-block;

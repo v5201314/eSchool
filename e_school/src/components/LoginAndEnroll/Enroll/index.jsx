@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import axios from 'axios'
+import { SERVERURL } from '../../../constantValue'
 
 import './index.css'
 export default class Enroll extends Component {
@@ -17,7 +18,7 @@ export default class Enroll extends Component {
     userNameIsRepeat: false,
 
     //验证码的src
-    verifyCodeSrc: "http://192.168.1.103:10010/common/verify/",
+    verifyCodeSrc: SERVERURL+"/common/verify/",
 
     //验证码是否错误(0/错误，1/正确)
     isVerifyCode: 1,
@@ -38,7 +39,7 @@ export default class Enroll extends Component {
   //点击更新验证码
   updateVerifyCode = (event) => {
     //给验证码的src后面拼接上 时间戳，刷新验证码
-    const verifyCodeSrc = "http://192.168.1.103:10010/common/verify/" + new Date().getTime()
+    const verifyCodeSrc = SERVERURL+"/common/verify/" + new Date().getTime()
     this.setState({ verifyCodeSrc })
   }
 
@@ -57,7 +58,7 @@ export default class Enroll extends Component {
       //用户名的验证
       case "userNameVerify":
         if (this.regexp.test(value)) {
-          axios.get("http://192.168.1.103:10010/user",{
+          axios.get(SERVERURL+"/user",{
             params:{
                 username:value
             }
@@ -121,7 +122,7 @@ export default class Enroll extends Component {
     const { userNameVerify, phoneVerify, passwordVerify, ConfirmPasswordVerify, userNameIsRepeat } = this.state
     if (!userNameIsRepeat && phoneVerify && ConfirmPasswordVerify && passwordVerify && userNameVerify) {
       //如果满足所有条件就提交 
-      axios.get(`http://192.168.1.103:10010/common/inVerify`, {
+      axios.get(SERVERURL+`/common/inVerify`, {
         params: {
           verify: this.userObj.graphicCaptcha,
         }
@@ -133,11 +134,11 @@ export default class Enroll extends Component {
               isVerifyCode: 0,
               enrollMsg: response.data.msg,
             })
-            const verifyCodeSrc = "http://192.168.1.103:10010/common/verify/" + new Date().getTime()
+            const verifyCodeSrc = SERVERURL+"/common/verify/" + new Date().getTime()
             this.setState({ verifyCodeSrc })
           } else {
             //继续提交
-            axios.post(`http://192.168.1.103:10010/user/save`, {             
+            axios.post(SERVERURL+`/user/save`, {             
                 "username": this.userObj.userName,
                 "password": this.userObj.password,
                 "phoneNumber": this.userObj.phone,    
