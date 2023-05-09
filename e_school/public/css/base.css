@@ -69,3 +69,24 @@ button {
     font-size: 14px;
     color: red;
 }
+
+/* 主要标签激活的样式 */
+.mainButton{
+    background-color: #3d7eff;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 49px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.mainButtonFlase{
+    background-color: #999999;
+    border-radius: 16px;
+    text-align: center;
+    line-height: 49px;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: not-allowed;
+}

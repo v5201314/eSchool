@@ -1,29 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component,Fragment } from 'react'
 import InfoBar from './InfoBar'
 export default class InfoBars extends Component {
-  state = {
-    infoBars: [
-      {
-        introduce: '头像',
-        path: '/changeAvatar'
-      },
-      {
-        introduce: '昵称',
-        path: '/changeNickname'
-      },
-      {
-        introduce: '我的地址',
-        path: '/changeMyAddress'
-      },
-    ]
-  }
   render() {
+  const {infoBars} = this.props
+  console.log(infoBars.length);
     return (
-      <div>
-        <InfoBar infoBar={this.state.infoBars[0]} />
-        <InfoBar infoBar={this.state.infoBars[1]} />
-        <InfoBar infoBar={this.state.infoBars[2]} />
-      </div>
+     <Fragment>
+        {
+          
+          infoBars.map((infoBarObj)=>{
+            return(
+              <InfoBar infoBar={infoBarObj} />
+            )
+          })
+
+        }
+
+</Fragment>
     )
   }
 }
