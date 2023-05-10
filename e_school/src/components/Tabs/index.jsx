@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
+import { changeTabsIdAction } from '../../redux/actions/tabsId'
+ 
 
 import './index.css'
-
-
-export default class Tabs extends Component {
-
-  //selectedIndex 被选中的标签的索引
-  state = { selectedIndex: 0 }
+class Tabs extends Component {
+  // 被选中的标签的索引 用redux管理
+ // this.props.tabsId
 
   //标签未选中icon的路径数组
   tabsImgFalse = [
@@ -30,11 +30,12 @@ export default class Tabs extends Component {
   //点击标签后触发
   selected = (event) => {
     const targetKey = event.currentTarget.dataset["index"]
-    this.setState({ selectedIndex: targetKey * 1 })
+    this.props.changeTabsIdAction(targetKey*1)
+   
   }
 
   render() {
-    const { selectedIndex } = this.state
+    const selectedIndex = this.props.tabsId
     const { tabsImgTrue, tabsImgFalse } = this
     return (
       <div id='tabs' ref={c => this.TabsRef = c}>
@@ -58,3 +59,13 @@ export default class Tabs extends Component {
     )
   }
 }
+
+export default connect(
+  (state)=>{
+    return{
+      tabsId:state.tabsId
+    }
+  },
+  {
+    changeTabsIdAction
+  })(Tabs)

@@ -68,7 +68,7 @@ class Login extends Component {
 
   //提交表单 登录
   submitFrom = () => {
-    this.props.changeUserIDAction(111)
+     this.props.changeUserIDAction(111)
     // const {userNameVerify,passwordVerify} = this.state
     // if(userNameVerify&&passwordVerify){
     //   console.log(this.userObj);
