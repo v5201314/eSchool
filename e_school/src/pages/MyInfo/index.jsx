@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import axios from 'axios'
 
 import UserInfo from './UserInfo'
 import TimeInfo from './TimeInfo/'
@@ -76,6 +77,12 @@ export default class MyInfo extends Component {
       }
     ]
   }
+
+  //组件挂载完毕的生命周期函数
+  componentDidMount(){
+    
+  }
+
   render() {
     const {otherFeatures,user} = this.state
     return (

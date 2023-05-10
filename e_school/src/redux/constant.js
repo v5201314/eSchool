@@ -4,3 +4,6 @@
 export const CHANGEUSERID = 'changeUserID'
 //改变光阴值
 export const CHANGETIMEVALUE = 'changeTimeValue'
+//改变选中标签id
+export const CHANGETABSID = 'changeTabsId'
+

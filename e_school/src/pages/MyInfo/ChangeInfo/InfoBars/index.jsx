@@ -1,5 +1,9 @@
 import React, { Component,Fragment } from 'react'
+import {nanoid} from 'nanoid'
+
 import InfoBar from './InfoBar'
+
+
 export default class InfoBars extends Component {
   render() {
   const {infoBars} = this.props
@@ -10,7 +14,7 @@ export default class InfoBars extends Component {
           
           infoBars.map((infoBarObj)=>{
             return(
-              <InfoBar infoBar={infoBarObj} />
+              <InfoBar key={nanoid()} infoBar={infoBarObj} />
             )
           })
 

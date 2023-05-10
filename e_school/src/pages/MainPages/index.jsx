@@ -1,7 +1,6 @@
 import React, { Component,Fragment } from 'react'
 import { Route, Routes} from 'react-router-dom'
 
-
 import Tabs  from '../../components/Tabs'
 import Home from '../Home'
 import Learn from '../Learn'
@@ -13,9 +12,9 @@ import MyInfo from '../MyInfo'
 export default class MainPages extends Component {
   render() {
     return (
-      <div>
-         <Fragment>
-                    <Tabs/>
+  
+         <Fragment>        
+                <Tabs/>
                 <Routes>
                     <Route path='/home' Component={Home} />
                     <Route path='/learn' Component={Learn} />
@@ -27,7 +26,8 @@ export default class MainPages extends Component {
 
                     </Routes>
                 </Fragment>
-      </div>
+  
+     
     )
   }
 }

@@ -14,10 +14,6 @@ import LoginAndEnroll from './components/LoginAndEnroll'
 import {connect} from 'react-redux'
 
 class App extends Component {
-    state = {
-        //是否打开设置
-        isSet:0,
-    }
     
     render() {
        const {userId} = this.props
@@ -29,6 +25,7 @@ class App extends Component {
                     <Fragment>
                     <Routes>
                     <Route path='/mainPages/*' Component={MainPages} />
+
                     <Route path='/appSet' Component={AppSet} />
                     <Route path='/changeInfo/*' Component={ChangeInfo} />
 
