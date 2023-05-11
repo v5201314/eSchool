@@ -6,4 +6,5 @@ export const CHANGEUSERID = 'changeUserID'
 export const CHANGETIMEVALUE = 'changeTimeValue'
 //改变选中标签id
 export const CHANGETABSID = 'changeTabsId'
+export const ISSHOWQUIT = 'isShowQuit'
 

@@ -1,14 +1,14 @@
-import React, { Component,Fragment } from 'react'
+import React, { Component } from 'react'
 import {nanoid} from 'nanoid'
 
 import InfoBar from './InfoBar'
 
-
+import './index.css'
 export default class InfoBars extends Component {
   render() {
   const {infoBars} = this.props
     return (
-     <Fragment>
+     <div id='infoBars'>
         {
           
           infoBars.map((infoBarObj)=>{
@@ -19,7 +19,7 @@ export default class InfoBars extends Component {
 
         }
 
-</Fragment>
+</div>
     )
   }
 }

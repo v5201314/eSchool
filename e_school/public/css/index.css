@@ -7,7 +7,9 @@ html,body{
     height: 100%;
     position: relative;
     background-color: #f9f9f9;
+    overflow: hidden;
 }
+
 
 /* 版心样式 */
 .wrapper{

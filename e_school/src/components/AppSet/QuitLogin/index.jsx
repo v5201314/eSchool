@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-//import './index.css'
-export default class QuitLogin extends Component {
+import './index.css'
+class QuitLogin extends Component {
+
   render() {
     return (
-      <div>
+      <div ref={this.props.firstRef} id='quitLogin'>
         <p>
             退出不会清空数据，下次登录依然可以使用。
         </p>
@@ -14,3 +16,14 @@ export default class QuitLogin extends Component {
     )
   }
 }
+
+export default connect(
+  (state)=>{
+    return{
+      isShowQuit:state.isShowQuit
+    }
+  },
+  {
+
+  }
+)(QuitLogin)

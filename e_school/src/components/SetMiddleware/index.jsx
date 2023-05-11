@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 import InfoBars from '../../pages/MyInfo/ChangeInfo/InfoBars'
 
+import './index.css'
 export default class SetMiddleware extends Component {
     state = {
         // “消息条需要的数据”
@@ -28,18 +29,15 @@ export default class SetMiddleware extends Component {
             },
             {
                 introduce: '退出登录',
-                path: '/changeMyAddress'
+                path: '0'
               },
         ]
     }
 
-    quitLogin = (event)=>{
-        console.log(event.target);
-      }
-
+   
     render() {
         return (
-            <div onClick={this.quitLogin}>
+            <div id='pointless1' >
                 <InfoBars infoBars={this.state.infoBars} />
             </div>
         )
