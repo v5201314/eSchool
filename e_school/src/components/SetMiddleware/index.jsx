@@ -32,11 +32,16 @@ export default class SetMiddleware extends Component {
               },
         ]
     }
+
+    quitLogin = (event)=>{
+        console.log(event.target);
+      }
+
     render() {
         return (
-            <Fragment>
+            <div onClick={this.quitLogin}>
                 <InfoBars infoBars={this.state.infoBars} />
-            </Fragment>
+            </div>
         )
     }
 }

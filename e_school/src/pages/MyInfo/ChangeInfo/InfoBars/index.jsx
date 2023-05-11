@@ -7,7 +7,6 @@ import InfoBar from './InfoBar'
 export default class InfoBars extends Component {
   render() {
   const {infoBars} = this.props
-  console.log(infoBars.length);
     return (
      <Fragment>
         {

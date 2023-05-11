@@ -26,7 +26,7 @@ class App extends Component {
                     <Routes>
                     <Route path='/mainPages/*' Component={MainPages} />
 
-                    <Route path='/appSet' Component={AppSet} />
+                    <Route path='/appSet/*' Component={AppSet} />
                     <Route path='/changeInfo/*' Component={ChangeInfo} />
 
                     <Route path="*" element={<Navigate to="/mainPages" />} />
