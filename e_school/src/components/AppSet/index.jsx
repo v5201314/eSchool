@@ -17,19 +17,20 @@ class AppSet extends Component {
       //退出登录
       quitLogin = (event)=>{
         if(event.target.childNodes[0].innerText==="退出登录"){
-            const target = this.firstRef.current
-            // obj.timer=setInterval(function(){
-            //     //正负不同，取值不同
-            //     var step=(target-obj.offsetLeft)/10;
-            //     step=step>0?Math.ceil(step):Math.floor(step);
-            //     if(obj.offsetLeft==target){
-            //         clearInterval(obj.timer);
-                    
-            //         callback&&callback();
-                    
-            //     }
-            //     obj.style.left=obj.offsetLeft+step+'px';
-            // },15)
+            //当前body高度 document.body.scrollHeight
+            const bodyHit=document.body.scrollHeight
+            const target = bodyHit-130
+            const obj = this.firstRef.current
+            obj.timer=setInterval(function(){
+                //正负不同，取值不同
+                var step=(target-obj.offsetTop)/10;
+                step=step>0?Math.ceil(step):Math.floor(step);
+                if(obj.offsetTop===target){
+                    clearInterval(obj.timer);
+             
+                }
+                obj.style.top=obj.offsetTop+step+'px';
+            },8)
         }
        
       }

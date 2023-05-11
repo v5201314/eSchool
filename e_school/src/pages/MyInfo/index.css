@@ -1,5 +1,6 @@
 #MyInfo {
   height: 100%;
+  overflow: scroll;
 }
 #MyInfo > div {
   width: 100%;

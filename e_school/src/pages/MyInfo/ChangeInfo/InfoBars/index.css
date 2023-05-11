@@ -1,4 +1,5 @@
 #infoBars{
+   height: 100%;
    padding-top: 42px;
    overflow: scroll;
 }
