@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class ChangeMyAddress extends Component {
   render() {
     return (
-      <div>ChangeMyAddress</div>
+      <div className='fullDisplay'>ChangeMyAddress</div>
     )
   }
 }

@@ -81,6 +81,8 @@ button {
     cursor: pointer;
 }
 
+
+/* 主要标签没有激活的样式 */
 .mainButtonFlase{
     background-color: #999999;
     border-radius: 16px;
@@ -89,4 +91,9 @@ button {
     font-size: 18px;
     color: #ffffff;
     cursor: not-allowed;
+}
+
+/* 有返回头页面的 */
+.fullDisplay{
+    padding-top:42px ;
 }

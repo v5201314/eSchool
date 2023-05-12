@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import axios from 'axios'
+import { SERVERURL } from '../../constantValue'
 
 import UserInfo from './UserInfo'
 import TimeInfo from './TimeInfo/'
@@ -8,7 +10,7 @@ import OrdersInfo from './OrdersInfo'
 import Notify from '../../components/Notify'
 import OtherFeatures from '../../components/OtherFeatures'
 import './index.css'
-export default class MyInfo extends Component {
+class MyInfo extends Component {
   state = {
     notify:'',
     //其他功能需要的icon与介绍
@@ -80,7 +82,12 @@ export default class MyInfo extends Component {
 
   //组件挂载完毕的生命周期函数
   componentDidMount(){
-    
+    axios.get(SERVERURL+`/user/`+this.props.userId,{
+      
+    }).then(
+      (res)=>{
+        console.log(res);
+    })
   }
 
   render() {
@@ -96,3 +103,14 @@ export default class MyInfo extends Component {
     )
   }
 }
+
+export default connect(
+  (state)=>{
+    return{
+      userId:state.userId
+    }
+  },
+  {
+
+  }
+)(MyInfo)

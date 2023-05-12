@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { changeUserIDAction } from '../../../redux/actions/userId'
 
 import './index.css'
+axios.defaults.withCredentials = true; // 启用跨域凭证
 class Login extends Component {
   state = {
      //用户名是否合法
@@ -84,6 +85,8 @@ class Login extends Component {
     //         })
     //       }else{
     //         this.props.changeUserIDAction(res.data.data.id)
+    //         axios.get(SERVERURL+`/user/login/`+res.data.data.id
+    //   )
     //       }
     //     }
     //   )

@@ -1,0 +1,13 @@
+#head .searchBox {
+  height: 29px;
+  background-color: #eaeaea;
+  border-radius: 15px;
+}
+#head .searchBox .GPS {
+  width: 56px;
+  height: 17px;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0px;
+  color: #3d7eff;
+}

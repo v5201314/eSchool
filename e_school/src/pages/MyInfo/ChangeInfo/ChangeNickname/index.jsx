@@ -27,7 +27,7 @@ class ChangeNickname extends Component {
     const {disabledValue} = this.state
     console.log(userId);
     return (
-      <div id='changeNickname'>
+      <div id='changeNickname' className='fullDisplay'>
         <input ref={this.myRef} type="text" onBlur={this.verifyNIck} placeholder='取一个响亮的名字吧!'/>
         <button disabled={disabledValue}  className={disabledValue?"mainButtonFlase":"mainButton"} onClick={this.submitNickname}>提交</button>
       </div>
