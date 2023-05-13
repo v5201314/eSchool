@@ -20,8 +20,8 @@ class App extends Component {
         return (
             <Fragment>
                 {
-                    userId === 0?
-                    <LoginAndEnroll/>:
+                    // userId === 0?
+                    // <LoginAndEnroll/>:
                     <Fragment>
                     <Routes>
                     <Route path='/mainPages/*' Component={MainPages} />

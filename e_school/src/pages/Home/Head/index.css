@@ -1,13 +1,70 @@
-#head .searchBox {
+#head {
+  min-width: 375px;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#head .searchBar {
+  width: 100%;
   height: 29px;
   background-color: #eaeaea;
   border-radius: 15px;
+  padding-left: 15px;
+  margin-right: 15px;
+  line-height: 29px;
 }
-#head .searchBox .GPS {
+#head .searchBar .GPS {
   width: 56px;
   height: 17px;
+  display: inline-block;
+  border-right: solid 1px #999999;
+  line-height: 17px;
   font-size: 14px;
-  line-height: 19px;
   letter-spacing: 0px;
   color: #3d7eff;
+}
+#head .searchBar .GPS img {
+  width: 14px;
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: bottom;
+}
+#head .searchBar .searchBox {
+  display: inline-block;
+  padding-left: 34px;
+}
+#head .searchBar .searchBox img {
+  width: 16px;
+  height: 16px;
+}
+#head .searchBar .searchBox input {
+  padding-left: 9px;
+  background-color: #eaeaea;
+}
+#head .message {
+  position: relative;
+  width: 24px;
+  height: 29px;
+  padding-top: 5px;
+}
+#head .message span {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 20px;
+  height: 14px;
+  background-color: #ff3d3d;
+  border-radius: 7px;
+  opacity: 0.8;
+  font-size: 13px;
+  text-align: center;
+  line-height: 14px;
+  color: #ffffff;
+}
+#head .message img {
+  width: 24px;
+  height: 24px;
 }
