@@ -1,15 +1,47 @@
 #carouselMap{
+    position: relative;
     height: 130px;
 	background-color: #cdd2ff;
 	border-radius: 8px;
     margin: 8px 0;
+    overflow: hidden;
     ul{
         
         li{
             img{
                 width: 100%;
                 height: 130px;
+               
             }
         }
     }
+
+    .circle{
+        position: absolute;
+        justify-content: space-between;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        li{
+           
+            display: inline-block;
+            margin-right: 4px;
+           
+        }
+    }
+}
+
+.falseLi{
+    width: 4px;
+	height: 4px;
+	background-color: #d5c8ff;
+	border-radius: 2px;
+}
+
+.trueLi{
+    width: 12px;
+	height: 4px;
+	background-color: #ffffff;
+	border-radius: 2px;
 }

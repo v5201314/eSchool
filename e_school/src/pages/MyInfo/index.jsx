@@ -12,7 +12,10 @@ import OtherFeatures from '../../components/OtherFeatures'
 import './index.css'
 class MyInfo extends Component {
   state = {
-    notify:'',
+    notify:{
+      content:'平台最新分享规则更新预告',
+      to:'',
+    },
     //其他功能需要的icon与介绍
     otherFeatures:[
       {
@@ -97,7 +100,7 @@ class MyInfo extends Component {
         <UserInfo userInfo={user[0]} />
         <TimeInfo timeInfo={user[1]} />
         <OrdersInfo ordersInfo={user[2]} />
-        <Notify/>
+        <Notify notify={this.state.notify}/>
         <OtherFeatures otherFeatures={otherFeatures}/>
       </div>
     )
