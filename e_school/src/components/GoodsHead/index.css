@@ -1,0 +1,14 @@
+#goodsHead {
+  height: 17px;
+  margin-bottom: 15px;
+}
+#goodsHead p {
+  float: left;
+  font-size: 16px;
+  color: #2c2c2c;
+}
+#goodsHead span {
+  float: right;
+  font-size: 13px;
+  color: #3c3c3c;
+}

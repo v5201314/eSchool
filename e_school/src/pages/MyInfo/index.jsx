@@ -12,6 +12,7 @@ import OtherFeatures from '../../components/OtherFeatures'
 import './index.css'
 class MyInfo extends Component {
   state = {
+    //通知栏需要的信息
     notify:{
       content:'平台最新分享规则更新预告',
       to:'',
@@ -94,13 +95,13 @@ class MyInfo extends Component {
   }
 
   render() {
-    const {otherFeatures,user} = this.state
+    const {notify,otherFeatures,user} = this.state
     return (
       <div id='MyInfo' className='wrapper'>
         <UserInfo userInfo={user[0]} />
         <TimeInfo timeInfo={user[1]} />
         <OrdersInfo ordersInfo={user[2]} />
-        <Notify notify={this.state.notify}/>
+        <Notify notify={notify}/>
         <OtherFeatures otherFeatures={otherFeatures}/>
       </div>
     )

@@ -1,0 +1,10 @@
+#newCourses .course {
+  display: flex;
+  justify-content: space-between;
+}
+#newCourses .course div {
+  width: 110px;
+  height: 122px;
+  background-image: url('../../../../public/images/图层 14.jpg');
+  border-radius: 8px;
+}
