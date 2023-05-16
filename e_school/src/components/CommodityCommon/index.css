@@ -1,0 +1,39 @@
+#commodityCommon {
+  height: 91px;
+  padding: 0px 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+}
+#commodityCommon > div {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(65, 84, 190, 0.12);
+  border-radius: 8px;
+  padding: 10px 0;
+}
+#commodityCommon > div a img {
+  width: 71px;
+  height: 71px;
+  vertical-align: top;
+}
+#commodityCommon > div a .gdsIntroduce {
+  display: inline-block;
+}
+#commodityCommon > div a .gdsIntroduce h3 {
+  color: #f38120;
+  font-size: 16px;
+  margin-bottom: 9px;
+}
+#commodityCommon > div a .gdsIntroduce p {
+  color: #333333;
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+#commodityCommon > div a .gdsIntroduce span {
+  padding: 5px 6px 4px;
+  border-radius: 5px;
+  border: solid 1px #3d7eff;
+  color: #3d7eff;
+  font-size: 12px;
+}

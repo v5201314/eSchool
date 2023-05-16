@@ -1,0 +1,52 @@
+#newToday {
+  height: 124px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(65, 84, 190, 0.12);
+  border-radius: 8px;
+  padding: 15px 8px 10px;
+  margin-bottom: 15px;
+}
+#newToday > span {
+  font-size: 18px;
+  color: #2c2c2c;
+}
+#newToday .goods > img {
+  vertical-align: top;
+  height: 67px;
+  margin: 2px 23px;
+  display: inline-block;
+}
+#newToday .goods .introduce {
+  display: inline-block;
+}
+#newToday .goods .introduce > p {
+  font-size: 15px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+#newToday .goods .introduce div {
+  font-size: 12px;
+}
+#newToday .goods .introduce div img {
+  width: 12px;
+  height: 13px;
+}
+#newToday .goods .introduce div span {
+  margin: 0px 8px;
+  color: #3d7eff;
+}
+#newToday .goods .introduce div .heat {
+  display: inline-block;
+  color: #999999;
+}
+#newToday .goods .introduce .goLook {
+  margin-top: 8px;
+  width: 74px;
+  height: 19px;
+  background-color: #3d7eff;
+  border-radius: 9px;
+  float: right;
+  font-size: 12px;
+  text-align: center;
+  line-height: 19px;
+}

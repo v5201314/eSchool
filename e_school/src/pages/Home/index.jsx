@@ -5,6 +5,10 @@ import CarouselMap from '../../components/CarouselMap'
 import Notify from '../../components/Notify'
 import OtherFeatures from '../../components/OtherFeatures'
 import NewCourses from './NewCourses'
+import ExchangeCenter from './ExchangeCenter'
+import WelfareEvents from './WelfareEvents'
+import NewToday from './NewToday'
+import ActiveTasks from './ActiveTasks'
 
 import './index.css'
 export default class Home extends Component {
@@ -52,6 +56,10 @@ export default class Home extends Component {
         <Notify notify={notify}/>
         <OtherFeatures otherFeatures={otherFeatures}/>
         <NewCourses/>
+        <ExchangeCenter/>
+        <WelfareEvents/>
+        <NewToday/>
+        <ActiveTasks/>
       </div>
     )
   }
