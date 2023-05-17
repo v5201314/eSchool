@@ -10,10 +10,13 @@
   font-size: 18px;
   color: #2c2c2c;
 }
+#newToday .goods {
+  text-align: center;
+}
 #newToday .goods > img {
   vertical-align: top;
   height: 67px;
-  margin: 2px 23px;
+  margin: 2px 17px;
   display: inline-block;
 }
 #newToday .goods .introduce {

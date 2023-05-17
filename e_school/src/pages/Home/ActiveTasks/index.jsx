@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GoodsHead from '../../../components/GoodsHead'
 import TasksBar from './TasksBar'
 
+import './index.css'
 export default class ActiveTasks extends Component {
     state = {
         goodsHead: {

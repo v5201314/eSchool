@@ -9,6 +9,7 @@ import ExchangeCenter from './ExchangeCenter'
 import WelfareEvents from './WelfareEvents'
 import NewToday from './NewToday'
 import ActiveTasks from './ActiveTasks'
+import CommunityActivities from './CommunityActivities'
 
 import './index.css'
 export default class Home extends Component {
@@ -60,6 +61,7 @@ export default class Home extends Component {
         <WelfareEvents/>
         <NewToday/>
         <ActiveTasks/>
+        <CommunityActivities/>
       </div>
     )
   }

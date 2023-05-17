@@ -13,13 +13,13 @@ export default class TasksBar extends Component {
                             
                                 <div id='tasksBar' key={tasksObj.tasksId}>
                                     <Link to={tasksObj.to}>
-                                    <img src="/images/-e-图层 4.png" alt="" />
+                                    <img src={tasksObj.imgSrc} alt="" />
                                     <div className='introduce'>
                                         <p>{tasksObj.title}</p>
                                         <div>
                                             <span className='circle'></span>
                                             <span className='energy'>{tasksObj.date}</span>
-                                            <img src="/icons/能量.png" alt="" />
+                                            <img src="/icons/火焰.png" alt="" />
                                             <p className='heat'>{tasksObj.heat}</p>
                                         </div>
                                     </div>
