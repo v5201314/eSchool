@@ -46,14 +46,48 @@ export default class Home extends Component {
         src:'/icons/myInfo/形状 47-2.png'
       },
     ],
+    //轮播图需要的数据
+    carouselMaps: [
+      {
+          //图片src
+          imgSrc: '/images/图层 1.png',
+          //去哪里？
+          to: '',
+          //图片key
+          key: 0,
+      },
+      {
+          //图片src
+          imgSrc: '/images/云朵穿心.jpg',
+          //去哪里？
+          to: '',
+          //图片key
+          key: 1,
+      }, {
+          //图片src
+          imgSrc: '/images/可爱兔子.jpg',
+          //去哪里？
+          to: '',
+          //图片key
+          key: 2,
+      },
+      {
+          //图片src
+          imgSrc: '/images/风景 1.jpg',
+          //去哪里？
+          to: '',
+          //图片key
+          key: 3,
+      }
+  ]
   }
   render() {
-    const {notify,otherFeatures} = this.state
+    const {notify,otherFeatures,carouselMaps} = this.state
     return (
       <div id='home' className='wrapper'>
         <Head/>
         <div style={{height:'29px'}}></div>
-        <CarouselMap/>
+        <CarouselMap carouselMaps={carouselMaps}/>
         <Notify notify={notify}/>
         <OtherFeatures otherFeatures={otherFeatures}/>
         <NewCourses/>
@@ -62,6 +96,7 @@ export default class Home extends Component {
         <NewToday/>
         <ActiveTasks/>
         <CommunityActivities/>
+        <div style={{height:'41px'}}></div>
       </div>
     )
   }

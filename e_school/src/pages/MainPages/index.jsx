@@ -22,7 +22,7 @@ export default class MainPages extends Component {
                     <Route path='/task' Component={Task} />
                     <Route path='/myInfo' Component={MyInfo} />
 
-                    <Route path='/' Component={Home}/>
+                    <Route path='/' Component={Task}/>
 
                     </Routes>
                 </Fragment>

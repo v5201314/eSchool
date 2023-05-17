@@ -46,28 +46,28 @@ export function advancedSliding(event,slideObj) {
         if(end_start.slidingDistance>=slidingDistance){
             if(end_start.X>0){
                 if(Math.abs(end_start.Y)<=end_start.X){
-                    console.log("右滑");
+                 
                     slideObj.right&&slideObj.right();
                 }
             }
 
             if(end_start.X<0){
                 if(Math.abs(end_start.Y)<=Math.abs(end_start.X)){
-                    console.log("左滑");
+                  
                     slideObj.left&&slideObj.left();
                 }
             }
 
             if(end_start.Y>0){   
                 if(Math.abs(end_start.X)<end_start.Y){
-                    console.log("下滑");
+                    
                     slideObj.bottom&&slideObj.bottom();
                 }
             }
 
             if(end_start.Y<0){
                 if(Math.abs(end_start.X)<Math.abs(end_start.Y)){
-                    console.log("上滑");
+                 
                     slideObj.top&&slideObj.top();
                 }
             }

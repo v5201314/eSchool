@@ -103,6 +103,7 @@ class MyInfo extends Component {
         <OrdersInfo ordersInfo={user[2]} />
         <Notify notify={notify}/>
         <OtherFeatures otherFeatures={otherFeatures}/>
+        <div style={{height:'41px'}}></div>
       </div>
     )
   }

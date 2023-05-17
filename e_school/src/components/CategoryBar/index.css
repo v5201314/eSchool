@@ -1,0 +1,8 @@
+#categoryBar {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+#categoryBar select {
+  border: 0px;
+}
