@@ -3,4 +3,5 @@
 }
 #task .taskMain {
   height: 100%;
+  overflow: scroll;
 }

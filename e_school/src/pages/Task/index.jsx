@@ -57,6 +57,7 @@ export default class Task extends Component {
           <CarouselMap carouselMaps={carouselMaps} />
           <Notify notify={notify}/>
           <ContentArea/>
+          <div style={{height:'72px'}}></div>
         </div>
       </div>
     )
