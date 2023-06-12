@@ -114,6 +114,8 @@ export default class ContentArea extends Component {
 
     }
 
+   
+
     componentDidMount(){
         //通过网络请求赋值
         this.setState({tasksBars:this.tasksBars})
@@ -129,7 +131,7 @@ export default class ContentArea extends Component {
                     tasksBars.map((tasksObj) => {
                         return (
                             <div id='tasksBar-task' key={tasksObj.tasksId}>
-                                <Link >
+                                <Link to={{pathname:'/taskDetails',state:tasksObj}} >
                                     <img src={tasksObj.imgSrc} alt="" />
                                     <div className='introduce'>
                                         <p>{tasksObj.title}</p>

@@ -13,10 +13,13 @@ import LoginAndEnroll from './components/LoginAndEnroll'
 //引入 connect用于连接UI组件与redux
 import {connect} from 'react-redux'
 
+import TaskDetails from './pages/Task/TaskDetails'
+
 class App extends Component {
     
     render() {
        const {userId} = this.props
+       const AlinputRmin = ()=><div><TaskDetails/></div>
         return (
             <Fragment>
                 {
@@ -28,6 +31,7 @@ class App extends Component {
 
                     <Route path='/appSet/*' Component={AppSet} />
                     <Route path='/changeInfo/*' Component={ChangeInfo} />
+                    <Route path='/taskDetails' element={AlinputRmin()}/>
 
                     <Route path="*" element={<Navigate to="/mainPages" />} />
                 </Routes>
