@@ -131,7 +131,7 @@ export default class ContentArea extends Component {
                     tasksBars.map((tasksObj) => {
                         return (
                             <div id='tasksBar-task' key={tasksObj.tasksId}>
-                                <Link to={{pathname:'/taskDetails',state:tasksObj}} >
+                                <Link to='/taskDetails' state={tasksObj} >
                                     <img src={tasksObj.imgSrc} alt="" />
                                     <div className='introduce'>
                                         <p>{tasksObj.title}</p>

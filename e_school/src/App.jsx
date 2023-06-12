@@ -31,7 +31,7 @@ class App extends Component {
 
                     <Route path='/appSet/*' Component={AppSet} />
                     <Route path='/changeInfo/*' Component={ChangeInfo} />
-                    <Route path='/taskDetails' element={AlinputRmin()}/>
+                    <Route path='/taskDetails/*'  element={AlinputRmin()}/>
 
                     <Route path="*" element={<Navigate to="/mainPages" />} />
                 </Routes>

@@ -1,14 +1,16 @@
 import React from 'react'
-import {useParams} from 'react-router-dom'
+import {useLocation} from 'react-router-dom'
+import ReturnArea from '../../../components/ReturnArea';
+function TaskDetails (){
 
-const TaskDetails = ()=> {
-
-    const params = useParams();
-  console.log(params);
+    const location = useLocation();
+    console.log(location);
+  const myParam = location.state?.myParam ?? '';
+  console.log(myParam);
     return (
-      <div>Task details</div>
+        <ReturnArea header="任务详情"/>
+        
     )
-  
-}
+  }
 
-export default TaskDetails
+  export default TaskDetails
