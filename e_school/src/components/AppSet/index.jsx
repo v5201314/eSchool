@@ -13,10 +13,16 @@ class AppSet extends Component {
       }
 
       firstRef = React.createRef()
+      rtyRef = React.createRef()
 
       //退出登录
       quitLogin = (event)=>{
+       
         if(event.target.childNodes[0].innerText==="退出登录"){
+           //先将父元素显示
+            const rty = this.rtyRef.current
+            rty.style.display = "inline-block"
+
             //当前body高度 document.body.scrollHeight
             const bodyHit=document.body.scrollHeight
             const target = bodyHit-130
@@ -44,7 +50,7 @@ class AppSet extends Component {
                 <Routes>
                     <Route path='/' Component={SetMiddleware} />
                 </Routes>
-                <QuitLogin firstRef={this.firstRef}/>
+                <QuitLogin firstRef={this.firstRef} rtyRef={this.rtyRef}/>
             </div>
         )
     }

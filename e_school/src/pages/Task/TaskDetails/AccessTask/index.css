@@ -1,0 +1,44 @@
+#AccessTask {
+  padding: 42px 15px 0px;
+}
+#AccessTask .zs {
+  width: 100%;
+  height: 130px;
+  margin: 10px 0px 24px;
+  border-radius: 8px ;
+}
+#AccessTask .content li {
+  margin-bottom: 10px;
+}
+#AccessTask .content li span {
+  font-size: 17px;
+}
+#AccessTask .content li p {
+  display: inline-block;
+  color: #3aa8df;
+  font-size: 14px;
+}
+#AccessTask .content li textarea {
+  width: 100%;
+  height: 90px;
+  border-radius: 3px;
+  border: solid 1px #e0e0e0;
+  resize: none;
+}
+#AccessTask .content li img {
+  width: 14px;
+  height: 16px;
+  margin: 0px 6px;
+  vertical-align: middle;
+}
+#AccessTask button {
+  width: 100%;
+  height: 49px;
+  background-color: #3d7eff;
+  border-radius: 16px;
+  text-align: center;
+  line-height: 49px;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 20px;
+}

@@ -1,16 +1,23 @@
-import React from 'react'
-import {useLocation} from 'react-router-dom'
+import React, { Fragment } from 'react'
+import { useLocation } from 'react-router-dom'
+
+
+
 import ReturnArea from '../../../components/ReturnArea';
-function TaskDetails (){
+import AccessTask from './AccessTask';
 
-    const location = useLocation();
-    console.log(location);
-  const myParam = location.state?.myParam ?? '';
-  console.log(myParam);
-    return (
-        <ReturnArea header="任务详情"/>
-        
-    )
-  }
+function TaskDetails() {
 
-  export default TaskDetails
+  const location = useLocation();
+  return (
+    <Fragment>
+      <ReturnArea header="任务详情" />
+      <AccessTask taskObj={location.state}/>
+
+    </Fragment>
+
+
+  )
+}
+
+export default TaskDetails
