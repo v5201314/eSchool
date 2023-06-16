@@ -9,7 +9,7 @@ export default class GoodsHead extends Component {
       <div id='goodsHead'>
         <p>{goodsHead.info}</p>
         <Link to={goodsHead.to}>
-        <span>查看详情</span>
+        <span>{goodsHead.toInfo}</span>
         </Link>     
       </div>
     )

@@ -58,7 +58,7 @@ export default class Enroll extends Component {
       //用户名的验证
       case "userNameVerify":
         if (this.regexp.test(value)) {
-          axios.get(SERVERURL+"/user",{
+          axios.get(SERVERURL+"/user/repeat",{
             params:{
                 username:value
             }

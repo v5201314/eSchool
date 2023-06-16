@@ -8,7 +8,8 @@ export default class CommunityActivities extends Component {
         goodsHead: {
             info: "社区活动",
             //跳转地方
-            to: ''
+            to: '',
+            toInfo:"查看详情"
           },
           tasksBars: [
             {

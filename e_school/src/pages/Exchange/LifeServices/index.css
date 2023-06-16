@@ -1,0 +1,9 @@
+#LifeServices {
+  margin-bottom: 20px;
+}
+#LifeServices #otherFeatures {
+  height: 101px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4px;
+  grid-template-rows: 1fr;
+}

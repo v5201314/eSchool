@@ -8,7 +8,8 @@ export default class NewCourses extends Component {
     goodsHead: {
       info: "最新课程",
       //跳转地方
-      to: ''
+      to: '',
+      toInfo: "查看详情"
     }
   }
   render() {
@@ -30,7 +31,7 @@ export default class NewCourses extends Component {
           </div>
           <div>
             <div className='detail'>
-            <div>
+              <div>
                 <p>
                   <span>高级</span>
                   雅思考情解析教程
@@ -41,7 +42,7 @@ export default class NewCourses extends Component {
           </div>
           <div>
             <div className='detail'>
-            <div>
+              <div>
                 <p>
                   <span>高级</span>
                   雅思考情解析教程

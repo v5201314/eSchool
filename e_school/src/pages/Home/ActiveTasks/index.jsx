@@ -8,7 +8,8 @@ export default class ActiveTasks extends Component {
         goodsHead: {
             info: "活动任务",
             //跳转地方
-            to: ''
+            to: '',
+            toInfo:"查看详情"
         },
         tasksBars: [
             {

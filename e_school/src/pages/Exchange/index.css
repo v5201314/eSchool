@@ -1,0 +1,7 @@
+#Exchange {
+  height: 100%;
+}
+#Exchange .box {
+  height: 100%;
+  overflow: scroll;
+}

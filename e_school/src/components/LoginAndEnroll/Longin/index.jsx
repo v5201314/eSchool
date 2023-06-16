@@ -69,28 +69,28 @@ class Login extends Component {
 
   //提交表单 登录
   submitFrom = () => {
-     this.props.changeUserIDAction(111)
-    // const {userNameVerify,passwordVerify} = this.state
-    // if(userNameVerify&&passwordVerify){
-    //   console.log(this.userObj);
-    //   axios.post(SERVERURL+`/user/login`,{
-    //     "username": this.userObj.username,
-    //     "password": this.userObj.password,
-    //   }).then(
-    //     res=>{
-    //       if(res.data.code===0){
-    //         this.setState({
-    //           userNameVerify:res.data.msg,
-    //           isLoginInfo:1
-    //         })
-    //       }else{
-    //         this.props.changeUserIDAction(res.data.data.id)
-    //         axios.get(SERVERURL+`/user/login/`+res.data.data.id
-    //   )
-    //       }
-    //     }
-    //   )
-    // }
+    //  this.props.changeUserIDAction(111)
+    const {userNameVerify,passwordVerify} = this.state
+    if(userNameVerify&&passwordVerify&&this.userObj.username!==''&&this.userObj.password!==''){
+      axios.post(SERVERURL+`/user/login`,{
+        "username": this.userObj.username,
+        "password": this.userObj.password,
+      }).then(
+        res=>{
+          if(res.data.code===0){
+            console.log(res.data.msg);
+            this.setState({
+              loginMsg:res.data.msg,
+              isLoginInfo:0
+            })
+          }else{
+            this.props.changeUserIDAction(res.data.data.loginId)
+            axios.get(SERVERURL+`/user/login/`+res.data.data.id
+      )
+          }
+        }
+      )
+    }
     
   }
   render() {

@@ -5,10 +5,10 @@ import CommodityCommon from '../../../components/CommodityCommon'
 export default class HotShopping extends Component {
     state = {
         goodsHead: {
-          info: "兑换中心",
+          info: "热门商品",
           //跳转地方
           to: '',
-          toInfo:"查看详情"
+          toInfo:"全部热门"
         },
         commodityCommon:[
           {
@@ -21,6 +21,22 @@ export default class HotShopping extends Component {
         },
         {
           goodsId:'2',
+          classify:'儿童书包',
+          goodsName:'护脊减负书包',
+          energy:1500,
+          imgSrc:'/images/-e-图层 8.png',
+          to:''
+        },
+        {
+          goodsId:'3',
+          classify:'儿童书包',
+          goodsName:'护脊减负书包',
+          energy:1500,
+          imgSrc:'/images/-e-图层 8.png',
+          to:''
+        },
+        {
+          goodsId:'4',
           classify:'儿童书包',
           goodsName:'护脊减负书包',
           energy:1500,
