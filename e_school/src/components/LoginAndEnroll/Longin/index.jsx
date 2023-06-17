@@ -85,8 +85,7 @@ class Login extends Component {
             })
           }else{
             this.props.changeUserIDAction(res.data.data.loginId)
-            axios.get(SERVERURL+`/user/login/`+res.data.data.id
-      )
+            localStorage.setItem(res.data.data.tokenName,JSON.stringify(res.data.data.tokenValue))
           }
         }
       )

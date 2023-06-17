@@ -2,20 +2,29 @@ import React, { Component,Fragment } from 'react'
 import { Route, Routes,Navigate} from 'react-router-dom'
 
 import MainPages from './pages/MainPages'
-
 //我的页面
 import AppSet from './components/AppSet'
 import ChangeInfo from './pages/MyInfo/ChangeInfo'
-
-
+//登录与注册
 import LoginAndEnroll from './components/LoginAndEnroll'
+//任务页面
+import TaskDetails from './pages/Task/TaskDetails'
 
 //引入 connect用于连接UI组件与redux
 import {connect} from 'react-redux'
 
-import TaskDetails from './pages/Task/TaskDetails'
+import { changeUserIDAction } from './redux/actions/userId'
 
 class App extends Component {
+
+    constructor(props){
+        super(props)
+        const storedData = JSON.parse(localStorage.getItem('satoken'));
+        if(storedData != null){
+            
+        } 
+        
+    }
     
     render() {
        const {userId} = this.props
@@ -23,6 +32,7 @@ class App extends Component {
         return (
             <Fragment>
                 {
+
                     userId === 0?
                     <LoginAndEnroll/>:
                     <Fragment>
@@ -50,4 +60,7 @@ export default  connect(
     state => ({
       userId:state.userId,
     }),
+    {
+        changeUserIDAction
+    }
     )(App)
