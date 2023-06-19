@@ -14,14 +14,30 @@ import TaskDetails from './pages/Task/TaskDetails'
 import {connect} from 'react-redux'
 
 import { changeUserIDAction } from './redux/actions/userId'
-
+import { permissionsAxios } from './utils/api'
 class App extends Component {
 
     constructor(props){
         super(props)
         const storedData = JSON.parse(localStorage.getItem('satoken'));
         if(storedData != null){
-            
+             //调用封装的axios函数
+      permissionsAxios('GET','/user/login',{
+        }).then(
+          res=>{
+            if(res.data.code===0){
+              console.log(res);
+              this.setState({
+                loginMsg:res.data.msg,
+                isLoginInfo:0
+              })
+            }else{
+                console.log(res.data.data.id);
+              this.props.changeUserIDAction(res.data.data.id)
+              localStorage.setItem(res.data.data.tokenName,JSON.stringify(res.data.data.tokenValue))
+            }
+          }
+        )
         } 
         
     }

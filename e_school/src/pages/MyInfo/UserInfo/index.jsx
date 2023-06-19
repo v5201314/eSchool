@@ -17,7 +17,7 @@ export default class UserInfo extends Component {
 
             <div className='userDetail'>
               <div className='userName'>
-                <p>{userInfo.nicName}</p>
+                <p>{userInfo.nickname}</p>
                 <span>v{userInfo.vip}</span>
               </div>
               <div className='referrer'>
@@ -26,7 +26,7 @@ export default class UserInfo extends Component {
               </div>
               <div className=' inviteCode'>
               <span>邀请码：</span>
-                <p>{userInfo.invitationCode}</p>
+                <p>{userInfo.inventCode}</p>
               </div>
             </div>
            

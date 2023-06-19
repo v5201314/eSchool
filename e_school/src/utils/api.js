@@ -12,12 +12,22 @@ export const changeTimeValue = (data) => {
     })
 }
 
-export async function permissionsAxios(requestType,requestUrl,data){
-   const {data:res} =await  axios({
+/**
+ * 封装的 axios 请求方法
+ * @param {请求类型} requestType 
+ * @param {请求路径} requestUrl 
+ * @param {请求数据} data 
+ * @returns 
+ */
+export function permissionsAxios(requestType,requestUrl,data){
+    const storedData = JSON.parse(localStorage.getItem('satoken'));
+    return axios({
         method: requestType,
         url: SERVERURL+requestUrl,
-        data
+        headers:{
+            "content-type": "application/x-www-form-urlencoded",
+            "satoken":storedData
+        },
+        ...data
     })
-
-    return res
 }

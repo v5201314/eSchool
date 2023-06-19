@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import axios from 'axios'
-import { SERVERURL } from '../../constantValue'
 
 import UserInfo from './UserInfo'
 import TimeInfo from './TimeInfo/'
 import OrdersInfo from './OrdersInfo'
 import Notify from '../../components/Notify'
 import OtherFeatures from '../../components/OtherFeatures'
+
+import { permissionsAxios } from '../../utils/api'
+
 import './index.css'
 class MyInfo extends Component {
   state = {
@@ -57,50 +58,68 @@ class MyInfo extends Component {
       },
     ],
     //用户的信息
-    user:[
+    
       //第一个对象，用户的基本信息
-      {
+      userInfo:{
         id:'0',
-        nicName:'你的小可爱',
+        nickname:'你的小可爱',
         vip:'4',
         avatar:'/images/图层 14.jpg',
         Referrer:'张三',
-        invitationCode:'FEOOXY',
+        inventCode:'FEOOXY',
       },
       //第二个对象，用户的光阴值信息
-      {
-        timeValue:888,
-        WithdrawableTime:9,
-        todayTime:0,
-        yesterdayTime:0,
+      timeInfo:{
+        totalValue:888,
+        usefulValue:9,
+        todayValue:0,
+        yesterdayValue:0,
       },
       //第三个对象，用户的订单信息
-      {
+      ordersInfo:{
         
         shoppingCart:0,
         ordersFalse:0,
         ordersTrue:0,
       }
-    ]
+    
   }
 
   //组件挂载完毕的生命周期函数
   componentDidMount(){
-    axios.get(SERVERURL+`/user/`+this.props.userId,{
-      
+    //获取userInfo
+    permissionsAxios('GET','/user/login',{
     }).then(
-      (res)=>{
-        console.log(res);
-    })
+      res=>{
+        if(res.data.code===0){
+          console.log(res);
+        }else{
+          this.setState({userInfo:res.data.data})
+        }
+      }
+    )
+    //获取timeInfo
+    permissionsAxios('GET','/timeValue',{
+      params:{
+        id:this.props.userId
+      },
+    }).then(
+      res=>{
+        if(res.data.code===0){
+        }else{
+          this.setState({timeInfo:res.data.data})
+        }
+      }
+    )
   }
 
   render() {
-    const {notify,otherFeatures,user} = this.state
+    const {notify,otherFeatures,userInfo,timeInfo,ordersInfo} = this.state
     return (
       <div id='MyInfo' className='wrapper'>
-        <UserInfo userInfo={user[0]} />
-        <TimeInfo timeInfo={user[1]} />
-        <OrdersInfo ordersInfo={user[2]} />
+        <UserInfo userInfo={userInfo} />
+        <TimeInfo timeInfo={timeInfo }/>
+        <OrdersInfo ordersInfo={ordersInfo} />
         <Notify notify={notify}/>
         <OtherFeatures otherFeatures={otherFeatures}/>
         <div style={{height:'41px'}}></div>

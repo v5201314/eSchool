@@ -4,10 +4,13 @@ import { connect } from 'react-redux'
 import { changeUserIDAction } from '../../../redux/actions/userId'
 import { changeTabsIdAction } from '../../../redux/actions/tabsId'
 
+import { permissionsAxios } from '../../../utils/api'
+
 import './index.css'
 class QuitLogin extends Component {
 
   tureQuit = ()=>{
+    permissionsAxios("DELETE","/user/logout")
     this.props.changeUserIDAction(0)
     this.props.changeTabsIdAction(0)
   }

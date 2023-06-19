@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import { SERVERURL } from '../../../constantValue'
 
+
 import { connect } from 'react-redux'
 import { changeUserIDAction } from '../../../redux/actions/userId'
 
@@ -89,6 +90,27 @@ class Login extends Component {
           }
         }
       )
+
+      //调用封装的axios函数
+    //   permissionsAxios('POST','/user/login',{
+    //     data:{
+    //       "username": this.userObj.username,
+    //       "password": this.userObj.password,
+    //     }
+    //     }).then(
+    //       res=>{
+    //         if(res.data.code===0){
+    //           console.log(res.data.msg);
+    //           this.setState({
+    //             loginMsg:res.data.msg,
+    //             isLoginInfo:0
+    //           })
+    //         }else{
+    //           this.props.changeUserIDAction(res.data.data.loginId)
+    //           localStorage.setItem(res.data.data.tokenName,JSON.stringify(res.data.data.tokenValue))
+    //         }
+    //       }
+    //     )
     }
     
   }
