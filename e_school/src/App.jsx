@@ -1,6 +1,5 @@
 import React, { Component,Fragment } from 'react'
 import { Route, Routes,Navigate} from 'react-router-dom'
-
 import MainPages from './pages/MainPages'
 //我的页面
 import AppSet from './components/AppSet'
@@ -49,8 +48,8 @@ class App extends Component {
             <Fragment>
                 {
 
-                    userId === 0?
-                    <LoginAndEnroll/>:
+                    // userId === 0?
+                    // <LoginAndEnroll/>:
                     <Fragment>
                     <Routes>
                     <Route path='/mainPages/*' Component={MainPages} />

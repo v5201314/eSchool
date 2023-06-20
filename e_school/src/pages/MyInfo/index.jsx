@@ -61,7 +61,7 @@ class MyInfo extends Component {
     
       //第一个对象，用户的基本信息
       userInfo:{
-        id:'0',
+        id:0,
         nickname:'你的小可爱',
         vip:'4',
         avatar:'/images/图层 14.jpg',
@@ -87,14 +87,17 @@ class MyInfo extends Component {
 
   //组件挂载完毕的生命周期函数
   componentDidMount(){
-    //获取userInfo
+    //获取本地的 userInfo ，如果没有就向服务器请求
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    if(userInfo===null){
+    if(this.state.userInfo.id===undefined){
     permissionsAxios('GET','/user/login',{
     }).then(
       res=>{
         if(res.data.code===0){
           console.log(res);
         }else{
-          this.setState({userInfo:res.data.data})
+          localStorage.setItem("userInfo",JSON.stringify(res.data.data.tokenValue))
         }
       }
     )
@@ -107,11 +110,16 @@ class MyInfo extends Component {
       res=>{
         if(res.data.code===0){
         }else{
-          this.setState({timeInfo:res.data.data})
+          localStorage.setItem("timeInfo",JSON.stringify(res.data.data.tokenValue))
         }
       }
     )
-  }
+    }
+
+    this.setState({userInfo:JSON.parse(localStorage.getItem('userInfo'))})
+    this.setState({timeInfo:JSON.parse(localStorage.getItem('timeInfo'))})
+
+  }}
 
   render() {
     const {notify,otherFeatures,userInfo,timeInfo,ordersInfo} = this.state
