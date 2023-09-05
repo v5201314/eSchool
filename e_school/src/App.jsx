@@ -9,11 +9,14 @@ import LoginAndEnroll from './components/LoginAndEnroll'
 //任务页面
 import TaskDetails from './pages/Task/TaskDetails'
 
+import BaiDuMap from './components/BaiDuMap'
+
 //引入 connect用于连接UI组件与redux
 import {connect} from 'react-redux'
 
 import { changeUserIDAction } from './redux/actions/userId'
 import { permissionsAxios } from './utils/api'
+
 class App extends Component {
 
     constructor(props){
@@ -55,9 +58,10 @@ class App extends Component {
                     <Route path='/mainPages/*' Component={MainPages} />
 
                     <Route path='/appSet/*' Component={AppSet} />
+                    <Route path='/baiduMap' Component={BaiDuMap} />
                     <Route path='/changeInfo/*' Component={ChangeInfo} />
                     <Route path='/taskDetails'  element={AlinputRmin()}/>
-
+                    
                     <Route path="*" element={<Navigate to="/mainPages" />} />
                 </Routes>
                 

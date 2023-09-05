@@ -1,0 +1,17 @@
+#Learn {
+  height: 100%;
+}
+#Learn .taskMain {
+  height: 100%;
+  overflow: scroll;
+}
+#Learn #otherFeatures {
+  height: 151px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 4px;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 7px ;
+}
+#Learn #otherFeatures div {
+  padding: 0;
+}
